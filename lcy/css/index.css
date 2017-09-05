@@ -118,4 +118,4 @@ position: absolute;left: 1158px;top: 2160px;cursor: pointer;
 #divli li:hover{color: red;}
 #lip li:hover{color: red;font-weight: bold;}
 #boxp:hover{color: red;font-weight: bold;}
-
+div{width: 100%;height: 100%;background: yellow;}
