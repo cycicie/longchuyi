@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../jquery-1.8.3.min.js" type="text/javascript">
+			
+		</script>
+		<link rel="stylesheet" type="text/css" href="index.css"/>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+		</style>
+	</head>
+	<body>
+		<div id="big" >
+			<div class="index_top" >
+				<span >CLINIQUE</span>
+				<img style="width: 72px;height: 72px;margin-left:316px ;" src="../img/QQ图片20170704110027.png"/>
+				<div id="index_one"><p id="weibo">全场任购加享2件</p>
+					<p style="text-align: center;cursor: pointer;">查看跟多></p>
+				</div>
+				<input type="text" placeholder="请输入关键字" id="inputfir"/>
+				<div class="index_tow">
+					<a href="landing.html">登陆/注册</a>
+				</div>
+				<div class="index_seven">
+					<a>在线客服</a>
+				</div>
+				<img class="tubiao" src="../img/ddd.PNG"/>
+			</div>
+			<div id="ulConten">
+				<ul id="liConten">
+			<li>全新升级</li>
+			<li>当即热推</li>
+			
+			<li>经典三部曲
+			</li>
+			<li>护肤</li>
+			<li>彩妆</li>
+			<li>男士</li>
+			<li>香氛</li>
+			<li>畅销榜单</li>
+			<li>走进倩碧</li>
+		</ul>
+		<img class="lastBiao" src="../img/gggg.PNG"/>
+		<p id="myid">我的账户</p>
+			</div>
+			
+			
+			
+			
+			
+			<div id="very"></div>
+
+			
+			<hr />
+			<div id="staic">
+				<img id="staicImg" src="../img/微信图片_20170626092605.jpg"/>
+			</div>
+			<hr />
+			<div id="box">
+				<p id="contenone">TOP 10</p>
+				<p id="contentow">C粉最爱十大明星产品</p>
+				<p id="boxp" style="font-size: 50px;margin-top: 200px;cursor: pointer;"><</p>
+					<span id="boxp"  style="font-size: 50px;position: absolute;left: 1200px;bottom: -520px;cursor: pointer;">></span>
+					<ul id="lip">
+						<li>1<p>一</p></li>
+						<li>2<p>一</p></li>
+						<li>3<p>一</p></li>
+							<li>4<p>一</p></li>
+								<!--<li>5<p>一</p></li>
+									<li>6<p>一</p></li>-->
+					</ul>
+					<ul id="limig">
+						<li id="chuu"><img src="../img/微信图片_20170626092635.png"/></li>
+						<li id="chuus"><img src="../img/微信图片_20170626092639.png"/></li>
+						<li id="chu"><img src="../img/微信图片_20170626092642.png"/></li>
+						<li id="chuuss"><img src="../img/微信图片_20170626092646.png"/></li>
+					</ul>	
+					
+					<ul id="divli">
+						
+				
+						<li><div><p>倩碧卓越润肤露</p>
+							<p>天才黄油</p>
+							<p>￥295:00</p>
+							<img src="../img/rating-4.0.png"/>
+							<span>(288)</span>
+						</div></li>
+						
+							<li><div><p>倩碧卓越润肤露</p>
+							<p>天才黄油</p>
+							<p>￥295:00</p>
+							<img src="../img/rating-4.5.png"/>
+							<span>(188)</span>
+						</div></li>
+						
+						
+						
+							<li><div><p>倩碧卓越润肤露</p>
+							<p>天才黄油</p>
+							<p>￥295:00</p>
+							<img src="../img/rating-4.9.png"/>
+							<span>(88)</span>
+						</div></li>
+						
+						
+						
+							<li><div><p>倩碧卓越润肤露</p>
+							<p>天才黄油</p>
+							<p>￥295:00</p>
+							<img src="../img/rating-4.6.png"/>
+							<span>(688)</span>
+						</div></li>
+							</ul>
+			</div>
+			
+			
+			<hr />
+			<div id="naxtBox">
+	
+			</div>
+			
+			
+			<div id="base">
+			<hr  />
+			<ul>
+				<li>联系电话：020-324-545-65</li>
+				<li>关注我们</li>
+				<li><img src="../img/捕获www.PNG"/></li>
+				<li>官方微信号：sdlkjhsghf</li>
+				<li><img class="oneimg" src="../img/但事实上.PNG"/></li>
+			
+			</ul>
+			<input type="tetx" id="wei" placeholder="接收倩碧电子邮件！获取新信息、网购优惠信息、更多资讯" />
+		    <button id="wei1">订阅</button>
+			
+			</div>
+		
+		</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(function(){
+			$("#very").load("lunbo.html")
+			$("#naxtBox").load("css.html")
+			$("#chuu").click(function(){
+				window.location.href="xiangxi.html";
+			})
+			$("#chuus").click(function(){
+				window.location.href="xiangxi.html";
+			})
+			$("#chu").click(function(){
+				window.location.href="xiangxi.html";
+			})
+			$("#chuu").click(function(){
+				window.location.href="xiangxi.html";
+			})
+			$("#liConten li").click(function(){
+				window.location.href="bar.html";
+			})
+			$(window).scroll(function(){
+				if(document.body.scrollTop>2221){
+					$("#index_top").css({"postion":"fixe","top":"0"})
+				}else{
+					$("#index_top").css("position","static")
+					
+				}
+			})
+			
+		})
+	
+	</script>
+</html>

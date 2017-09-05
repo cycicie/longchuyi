@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="index.css"/>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+		</style>
+	</head>
+	<body>
+		<div id="big" >
+			<div class="index_top" >
+				<span >CLINIQUE</span>
+				<img style="width: 72px;height: 72px;margin-left:316px ;" src="../img/QQ图片20170704110027.png"/>
+				<div id="index_one"><p id="weibo">全场任购加享2件</p>
+					<p style="text-align: center;cursor: pointer;">查看跟多></p>
+				</div>
+				<input type="text" placeholder="请输入关键字" id="inputfir"/>
+				<div class="index_tow">
+					<a>登陆/注册</a>
+				</div>
+				<div class="index_seven">
+					<a>在线客服</a>
+				</div>
+				<img class="tubiao" src="../img/ddd.PNG"/>
+			</div>
+			<div id="ulConten">
+				<ul id="liConten">
+			<li>全新升级</li>
+			<li>当即热推</li>
+			<li>经典三部曲</li>
+			<li>护肤</li>
+			<li>彩妆</li>
+			<li>男士</li>
+			<li>香氛</li>
+			<li>畅销榜单</li>
+			<li>走进倩碧</li>
+		</ul>
+		<img class="lastBiao" src="../img/gggg.PNG"/>
+		<p id="myid">我的账户</p>
+			</div>
+			
+			
+			
+			
+			<div id="lunboImg">
+				<ul id="pic">
+					
+				
+				<li><img id="lunbo" src="../img/微信图片_20170626093251.jpg"/></li>
+				<li><img id="lunbo" src="../img/微信图片1.jpg"/></li>
+				<li><img id="lunbo" src="../img/微信图片_20170628173148.jpg"/></li>
+				<li><img id="lunbo" src="../img/微信图片_20170628173225.jpg"/></li>
+				<li><img id="lunbo" src="../img/微信图片_20170626093214.jpg"/></li>
+				</ul>
+				
+				
+				
+				
+				<p id="leftBtn"><</p>
+					<p id="rightBtn">></p>
+			</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			<hr />
+			<div id="staic">
+				<img id="staicImg" src="../img/微信图片_20170626092605.jpg"/>
+			</div>
+			<hr />
+			<div id="box">
+				<p id="contenone">TOP 10</p>
+				<p id="contentow">C粉最爱十大明星产品</p>
+				<p style="font-size: 50px;margin-top: 200px;cursor: pointer;"><</p>
+					<pspan style="font-size: 50px;position: absolute;left: 1200px;bottom: -520px;cursor: pointer;">></span>
+			</div>
+			<hr />
+			<div id="naxtBox">
+				<h1>倩碧明星家族</h1>
+				<p>成就卓效呵护</p>
+				<ul>
+					<li><div style="background: #e9f8e3;"></div></li>
+					<li><div style="background: red;"></div></li>
+					<li><div style="background: salmon;"></div></li>
+					<li><div style="background: yellow;"></div></li>
+				</ul>
+	
+			</div>
+			
+			
+			
+			
+			<div id="base">
+			<hr  />
+			<ul>
+				<li>联系电话：020-324-545-65</li>
+				<li>关注我们</li>
+				<li><img src="../img/捕获www.PNG"/></li>
+				<li>官方微信号：sdlkjhsghf</li>
+				<li><img class="oneimg" src="../img/但事实上.PNG"/></li>
+			
+			</ul>
+			<input type="tetx" id="wei" placeholder="接收倩碧电子邮件！获取新信息、网购优惠信息、更多资讯" />
+		    <button id="wei1">订阅</button>
+			
+			</div>
+		
+		</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+			window.onload=function(){
+			
+			var inow=0;
+			var uls=document.getElementById("pic");
+			var lis=document.getElementsByTagName("li");
+			var onewidth=lis[0].offsetWidth;
+
+			var listag=document.getElementById("nav").children;
+				for(var i=0;i<listag.length;i++){
+					listag[i].num=i;
+					listag[i].onclick=function(){
+						inow=this.num;
+						move();
+					}
+				}
+		
+			var prev=document.getElementById("leftBtn");
+			var next=document.getElementById("rightBtn");
+		
+			prev.onclick=function(){
+				inow--;
+				move();
+			}
+	
+			next.onclick=function(){
+				inow++;
+				move();
+			}
+			
+			
+			//自动切换
+			setInterval(change,3000);
+			function change(){
+				inow++;
+				move();
+			}
+			
+			function move(){
+				if(inow>4){
+					inow=0;
+				}
+				if(inow<0){
+					inow=4;
+				}
+				for(var j=0;j<listag.length;j++){
+					listag[j].className="";
+				}
+				
+				uls.style.left=-inow*onewidth+"px";
+			}
+			
+			
+		}
+		
+		
+	</script>
+</html>

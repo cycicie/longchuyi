@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+				*{margin: 0; padding: 0;}
+			#wrap{
+				width: 100%;
+				height: 533px;
+				
+				position: relative;
+				overflow: hidden;
+			}
+			#pic{
+				width: 6400px;
+				height: 553px;
+				position: absolute;
+			}
+			#pic li{
+				list-style: none;
+				float: left;
+			}
+			#pic  li img{
+				width: 1280px;
+				height: 553px;
+			}
+
+			#nav{
+				
+				position: absolute;
+				bottom: 20px;
+				left: 480px;
+			}
+			#nav li{
+				list-style: none;
+				float: left;
+				cursor: pointer;
+				color: black;
+				margin-left: 50px;
+
+			}
+			#nav.active{
+				background: red;
+			}
+			
+			#prev,#next{
+				width: 70px;
+				height: 70px;
+				position: absolute;
+				text-align: center;
+				line-height: 300px;
+				font-size: 50px;
+				cursor: pointer;
+			}
+			#prev{
+				left: 0;
+				top: 120px;
+			}
+			#next{
+				right: 0;
+				top: 120px;
+			}
+			
+	#nav li:hover{
+		color: red;
+	} 		
+			
+			
+			
+			
+			
+			
+
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<ul id="pic">
+				<li><img src="../img/微信图片1.jpg"/></li>
+				<li><img src="../img/微信图片_20170626092605.jpg"/></li>
+				<li><img src="../img/微信图片_20170626093214.jpg"/></li>
+				<li><img src="../img/boutique17fp_pc_20170227_01.jpg"/></li>
+				<li><img src="../img/微信图片_20170628173148.jpg"/></li>
+			</ul>
+			<ul id="nav">
+				<li class="active">1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+				
+			</ul>
+			<div id="prev"><</div>
+			<div id="next">></div>
+		</div>
+	
+			
+	</body>
+	  <script type="text/javascript">
+	    
+			console.log("aa")
+			var inow=0;
+			var uls=document.getElementById("pic");
+			var lis=uls.getElementsByTagName("li");
+			var onewidth=lis[0].offsetWidth;
+
+			var listag=document.getElementById("nav").children;
+				for(var i=0;i<listag.length;i++){
+					listag[i].num=i;
+					listag[i].onclick=function(){
+					
+						inow=this.num;
+						move();
+					}
+					
+				}
+		
+			var prev=document.getElementById("prev");
+			var next=document.getElementById("next");
+		
+			prev.onclick=function(){
+				inow--;
+				move();
+			}
+	
+			next.onclick=function(){
+				inow++;
+				move();
+			}
+			setInterval(change,2000);
+			function change(){
+				inow++;
+				move();
+			}
+			
+			function move(){
+				if(inow>4){
+					inow=0;
+				}
+				if(inow<0){
+					inow=4;
+				}
+				for(var j=0;j<listag.length;j++){
+					listag[j].className="";
+				}
+				listag[inow].className="active";
+				
+				uls.style.left=-inow*onewidth+"px";
+			}
+			
+			
+		
+		
+		
+
+	  </script>
+</html>
